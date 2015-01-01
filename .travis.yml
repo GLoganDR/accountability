@@ -5,7 +5,7 @@ services:
   - postgresql
 addons:
   postgresql: "9.3"
-  #sauce_connect: true
+  sauce_connect: true
 notifications:
   email: false
 script:
@@ -14,8 +14,8 @@ script:
 before_script:
   - psql -c 'create database accountability_test;' -U postgres
   - cd test/scripts; ./create_db.sh accountability_test; cd ../..;
-  #- PORT=9000 node server/index.js&
-  #- sleep 5
+  - PORT=9000 node server/index.js&
+  - sleep 5
 after_script:
   - npm run coveralls
   - npm run e2e
@@ -24,9 +24,9 @@ env:
     - DATABASE_URL=postgres://postgres@localhost/accountability_test
     - AWS_BUCKET=logan-accountability-test
     # AWS_SECRET_ACCESS_KEY
-    - secure: "nFZBa6FGJTyFmvFpLClk8LsgsOn1WjkGSTWjNkj8VGUSLX2GEmUu6dyurk2L+XktcrLma+7Ooy2eDk24spvfZKp+ayTfLnr4bHVTbxCaHxiTVNyfaHQOm8xV/8ROBr5QRNP2wbrhRi9i8cgZHK+teonSHqHT+uSOTRnET1GGHEs="
+    - secure: "bA4NO78KDCD8nGXCjyetY6O6p2HISSbOSBpULW1l08Bt++Q8WzFEJtzXTkfb/x93iL/4YjpY6P0W8Xhsxar6bAtHShsT+jOFXG0fsb9uRRyEn395L08bP1H5CdLNSTWxBCqC0zCYti+57a7oJr9VF0UI5vU1dlE8WeQ0Ivm6XV0="
     # AWS_ACCESS_KEY_ID
-    - secure: "UwDQB4JXF/zp8iwacWppMhXYme27bsLuygVgRXOnKWotokzIr54Mnc2IvqDDvOUnYNKnBOhNaxDUyLs8ivSAyj4aorfgNTfHnu6mWEzWM/1ZV0ttRDdBqhUmZGsl02eSwjCc7VHKqpX9mbx9DFGHksw/jnS+/Muj80mru0bxL98="
+    - secure: "XTdHssW2xvyVd2QzqqEtJ5aD/2GJ3sHJBhWbxPHf1XziMCZ1yt0D6jNz6jtBSi/4bdYvyWTLwA6SO4k5/EhGciE4nSBK8egGFpXiUxQa3fSQWsx34t3PfkKeZ5KXu/ZiMqdcpid7VSFf4N5MnBK+hRXzt1NYuNPViuOKhcoaj9g="
     #SAUCE_USERNAME
     - secure: "GapAcHXUzDU/Ai3pIajGkD9yKsAAfY/fV6jJXw4y1qVNdzzRTqSV6XZAEzy8Qj++IslbEFK4OlNdNW8LRxcjTx/qX/fWkYqq+2iUiTL06tzt+r+N6rm4c2MUteB4T2BRYenfCv+BnBV6wMhxXXORFaY2f13MjXZV0HKCK7b4BeY="
     #SAUCE_ACCESS_KEY
