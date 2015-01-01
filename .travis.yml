@@ -30,4 +30,4 @@ env:
     #SAUCE_USERNAME
     - secure: "Z/rsdc/C8JSo8HUSd0vyH4PGMsmNe3nin/HCtVXWORuRcLlgXzSaOlygiSgVFXR5WO60T4YpV/7p7tdoujYe7VzWCsuVGKezoRkboXIsaF37qtVqLUl69vsg+MEEFx5y3oyvU8RQAMnm0kodiMWxe47aylKjvxq9tajC0yOjpp4="
     #SAUCE_ACCESS_KEY
-    - secure: "kC2/IHrEZr3v24u7DxaOgInrUOYZQddZn5RojD5V9jxAMWwZMfVLNAynIKsfimUR8b/HxPW1gtjbsJvLPN0kBYF192BsCkYgHZwep6h7lEeBQrmdMjoBTXJFRnE8KokvbPtooW2lqa925fyQqKk/NvIy7SaybeGE831X2Mwe3QQ="
+    - secure: "SrHdICv3LOlckhOIETRLKCrzX6xGAwGgRIQrSRZ4OGKq1AbeOb3I4F/ptZ35kZQw75y2l65tOYXmT/wKfTxfonVzprZNiRI0UoPyFWbDHKwQXWX0mAfzbB3rD2ay9J9EpK3LuOaw0n+qwqEb6+7OkIr+Mp7IUE/o2lnIeWm2Ghg="
