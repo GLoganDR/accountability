@@ -5,7 +5,7 @@ services:
   - postgresql
 addons:
   postgresql: "9.3"
-  sauce_connect: true
+  #sauce_connect: true
 notifications:
   email: false
 script:
@@ -14,8 +14,8 @@ script:
 before_script:
   - psql -c 'create database accountability_test;' -U postgres
   - cd test/scripts; ./create_db.sh accountability_test; cd ../..;
-  - PORT=9000 node server/index.js&
-  - sleep 5
+  #- PORT=9000 node server/index.js&
+  #- sleep 5
 after_script:
   - npm run coveralls
   - npm run e2e
