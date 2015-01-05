@@ -1,0 +1,25 @@
+h1 Politicians
+
+.row
+  .small-12.columns#search
+    .formgroup
+    label#search Search:
+    input#searchInput(ng-model='query')
+.row
+  .small-12.columns#results
+    h3 Results
+    table#politicians
+      thead
+        tr
+          th#name Name
+          th#party Party
+          th#state State
+      tbody(ng-repeat='politician in politicians | filter:query')
+        tr
+          td#name: a(ui-sref='politicians.detail({politicianId:politician.politician_id})') {{politician.name}}
+          td#party {{politician.party}}
+          td#state {{politician.state}}         
+    .pagination-centered
+      ul.pagination
+        li(ng-class='{current:isCurrent(page)}', ng-repeat='page in _.range(0,pages)')
+          a(ui-sref='politicians.list({page:page})') {{page}}

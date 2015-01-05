@@ -1,0 +1,32 @@
+h1 Dashboard
+.row
+  .small-12.columns#search
+    .formgroup
+    label#search Search:
+    input#searchInput(ng-model='query')
+.row
+  .small-12.columns
+    h3 Voted On:
+    table#politicians
+      thead
+        tr
+          th#delete Delete
+          th#name Name
+          th#party Party
+          th#state State          
+          th#vote Vote
+      tbody(ng-repeat='politician in politicians | filter:query')
+        tr
+          td#delete
+            a(ng-click='nuke(politician)')
+              img(ng-src='/assets/delete.png')
+          td#name: a(ui-sref='politicians.detail({politicianId:politician.politician_id})') {{politician.name}}
+          td#party {{politician.party}}
+          td#state {{politician.state}}
+          td#vote
+            span.vote(ng-repeat='name in politician.vote')
+              a(ui-sref='politicians.list({vote:name})') {{name}}         
+    .pagination-centered
+      ul.pagination
+        li(ng-class='{current:isCurrent(page)}', ng-repeat='page in _.range(0,pages)')
+          a(ui-sref='politicians.list({page:page})') {{page}}

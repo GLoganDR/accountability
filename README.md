@@ -18,7 +18,7 @@ Image1 Image2
 
 Description
 
-A political accountability app with Angular, PostgreSql, testing, travis, coveralls, hapi.js, and Node.js.
+A political accountability app with a gov tracker API and wrapper, Angular, PostgreSql, testing, travis, coveralls, hapi.js, and Node.js.
 
 Models
 

@@ -6,8 +6,9 @@ module.exports = [
   {method: 'post',   path: '/login',                        config: require('../definitions/users/login')},
   {method: 'delete', path: '/logout',                       config: require('../definitions/users/logout')},
   {method: 'get',    path: '/status',                       config: require('../definitions/users/status')}
-  //{method: 'post',   path: '/votes',                        config: require('../definitions/votes/create')},
-  //{method: 'get',    path: '/votes/{voteId}',               config: require('../definitions/votes/show')},
-  //{method: 'delete', path: '/votes/{voteId}',               config: require('../definitions/votes/nuke')},
-  //{method: 'get',    path: '/votes/count',                  config: require('../definitions/votes/count')}
+  //{method: 'get',    path: '/dashboard',                    config: require('../definitions/users/dashboard')}
+  //{method: 'post',   path: '/politicians',                  config: require('../definitions/politicians/create')},
+  //{method: 'get',    path: '/politicians/{politicianId}',   config: require('../definitions/politicians/show')},
+  //{method: 'delete', path: '/politicians/{politicianId}',   config: require('../definitions/politicians/nuke')},
+  //{method: 'get',    path: '/politicians/count',            config: require('../definitions/politicians/count')}
 ];
