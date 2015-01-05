@@ -1,0 +1,11 @@
+//h1 {{vote.name | uppercase}}
+//h6 //Date//
+//h6.subheader {{moment(vote.updated_at).format('MMMM Do YYYY @ h:mm:ss a')}}
+//h6 //Decision//
+//#decision
+//  .decision(ng-repeat='decision in vote.decision')
+//    a(ui-sref='votes.list({decision:decision})') {{decision}}
+//h6 //Party//
+//blockquote {{vote.party}}
+//h6 //State//
+//blockquote {{vote.state}}

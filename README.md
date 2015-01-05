@@ -18,7 +18,7 @@ Image1 Image2
 
 Description
 
-A note app with Angular, PostgreSql, testing, travis, coveralls, hapi.js, and Node.js.
+A political accountability app with Angular, PostgreSql, testing, travis, coveralls, hapi.js, and Node.js.
 
 Models
 

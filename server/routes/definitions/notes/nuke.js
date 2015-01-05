@@ -1,19 +1,19 @@
 //'use strict';
 //
 //var Joi  = require('joi'),
-//    Note = require('../../../models/note');
+//    Vote = require('../../../models/vote');
 //
 //module.exports = {
-//  description: 'Delete Note',
-//  tags:['notes'],
+//  description: 'Delete Vote',
+//  tags:['votes'],
 //  validate: {
 //    params: {
-//      noteId: Joi.number().required()
+//      voteId: Joi.number().required()
 //    }
 //  },
 //  handler: function(request, reply){
-//    Note.nuke(request.auth.credentials, request.params.noteId, function(err, noteId){
-//      reply({noteId:noteId}).code(err ? 400 : 200);
+//    Vote.nuke(request.auth.credentials, request.params.voteId, function(err, voteId){
+//      reply({voteId:voteId}).code(err ? 400 : 200);
 //    });
 //  }
 //};

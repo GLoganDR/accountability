@@ -8,10 +8,10 @@
       $stateProvider
         .state('home',         {url:'/',         templateUrl:'/views/home/home.html'})
         .state('register',     {url:'/register', templateUrl:'/views/users/users.html',        controller:'UsersCtrl'})
-        .state('login',        {url:'/login',    templateUrl:'/views/users/users.html',        controller:'UsersCtrl'});
-        //.state('notes',        {url:'/notes',    templateUrl:'/views/notes/notes.html',        abstract:true})
-        //.state('notes.list',   {url:'?tag&page', templateUrl:'/views/notes/notes_list.html',   controller:'NotesListCtrl'})
-        //.state('notes.detail', {url:'/{noteId}', templateUrl:'/views/notes/notes_detail.html', controller:'NotesDetailCtrl'});
+        .state('login',        {url:'/login',    templateUrl:'/views/users/users.html',        controller:'UsersCtrl'})
+        .state('votes',        {url:'/votes',    templateUrl:'/views/votes/votes.html',        abstract:true})
+        .state('votes.list',   {url:'?decision&page', templateUrl:'/views/votes/votes_list.html',   controller:'VotesListCtrl'})
+        .state('votes.detail', {url:'/{voteId}', templateUrl:'/views/votes/votes_detail.html', controller:'VotesDetailCtrl'});
       }])
     .run(['$rootScope', '$http', function($rootScope, $http){
       $http.get('/status').then(function(response){

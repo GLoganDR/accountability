@@ -1,20 +1,20 @@
 //'use strict';
 //
 //var Joi  = require('joi'),
-//    Note = require('../../../models/note');
+//    Vote = require('../../../models/vote');
 //
 //module.exports = {
-//  description: 'Show Note',
-//  tags:['notes'],
+//  description: 'Show Vote',
+//  tags:['votes'],
 //  validate: {
 //    params: {
-//      noteId: Joi.number().required()
+//      voteId: Joi.number().required()
 //    }
 //  },
 //  cors:{origin: ['http://localhost:8100'], credentials: true},
 //  handler: function(request, reply){
-//    Note.show(request.auth.credentials, request.params.noteId, function(err, note){
-//      reply(note).code(err ? 400 : 200);
+//    Vote.show(request.auth.credentials, request.params.voteId, function(err, vote){
+//      reply(vote).code(err ? 400 : 200);
 //    });
 //  }
 //};

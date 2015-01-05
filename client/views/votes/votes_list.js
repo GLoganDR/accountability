@@ -2,23 +2,19 @@
 //  'use strict';
 //
 //  angular.module('accountability')
-//  .controller('NotesListCtrl', ['$scope', '$state', 'Note', function($scope, $state, Note){
-//    $scope.files = [];
+//  .controller('VotesListCtrl', ['$scope', '$state', 'Vote', function($scope, $state, Vote){
 //    $scope.count = 0;
 //    $scope.pages = 0;
 //    $scope._ = _;
 //
-//    Note.query($state.params.tag || '%', $state.params.page * 1 || 0).then(function(response){
-//      $scope.notes = response.data.notes;
-//    });
 //
-//    Note.count().then(function(response){
+//    Vote.count().then(function(response){
 //      $scope.total = response.data.count * 1;
 //      $scope.pages = Math.ceil($scope.total / 5);
 //    });
 //
-//    $scope.nuke = function(note){
-//      Note.nuke(note).then(function(response){
+//    $scope.nuke = function(vote){
+//      Vote.nuke(vote).then(function(response){
 //        $state.reload();
 //      });
 //    };
@@ -27,11 +23,11 @@
 //      return page === $state.params.page * 1;
 //    };
 //
-//    $scope.create = function(note){
+//    $scope.create = function(vote){
 //      $scope.count = 0;
-//      Note.create(note).then(function(response){
-//        $scope.note = {};
-//        Note.upload(response.data.noteId, $scope.files);
+//      Vote.create(vote).then(function(response){
+//        $scope.vote = {};
+//        Vote.upload(response.data.voteId, $scope.files);
 //      });
 //    };
 //
